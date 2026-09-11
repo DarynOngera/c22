@@ -1,0 +1,21 @@
+# Target labels
+ curl_export
+# Source files and their labels
+/home/ongera/projects/c22/build/android/CMakeFiles/curl_export
+/home/ongera/projects/c22/build/android/CMakeFiles/curl_export.rule
+/home/ongera/projects/c22/build/android/CMakeFiles/curl_export-complete.rule
+/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-stamp/curl_export-build.rule
+/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-stamp/curl_export-configure.rule
+/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-stamp/curl_export-download.rule
+/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-stamp/curl_export-install.rule
+/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-stamp/curl_export-mkdir.rule
+/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-stamp/curl_export-patch.rule
+/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-stamp/curl_export-update.rule
+/home/ongera/projects/c22/build/android/CMakeFiles/openssl_export-complete.rule
+/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-build.rule
+/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-configure.rule
+/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-download.rule
+/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-install.rule
+/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-mkdir.rule
+/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-patch.rule
+/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-update.rule

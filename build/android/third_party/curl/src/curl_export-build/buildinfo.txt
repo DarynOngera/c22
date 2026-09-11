@@ -1,0 +1,15 @@
+# This is a generated file.  Do not edit.
+buildinfo.configure.tool: cmake
+buildinfo.configure.command: /usr/bin/cmake
+buildinfo.configure.version: 3.31.6
+buildinfo.configure.args:
+buildinfo.configure.generator: Ninja
+buildinfo.configure.make: /usr/bin/ninja
+buildinfo.host.cpu: x86_64
+buildinfo.host.os: Linux
+buildinfo.target.cpu: aarch64
+buildinfo.target.os: Android
+buildinfo.target.flags: UNIX CROSS
+buildinfo.compiler: Clang
+buildinfo.compiler.version: 18.0.2
+buildinfo.sysroot: /home/ongera/Android/Sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/linux-x86_64/sysroot

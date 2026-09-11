@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-stamp/verify-curl_export.cmake;COMMAND;/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-stamp/extract-curl_export.cmake
+source_dir=/home/ongera/projects/c22/build/android/third_party/curl/src/curl_export
+work_dir=/home/ongera/projects/c22/build/android/third_party/curl/src
+url(s)=/home/ongera/projects/c22/third_party/downloads/curl.tar.gz
+hash=
+      no_extract=
+

@@ -1,0 +1,43 @@
+CMake Deprecation Warning at /home/ongera/Android/Sdk/ndk/27.1.12297006/build/cmake/android.toolchain.cmake:35 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-build/CMakeFiles/3.31.6/CMakeSystem.cmake:6 (include)
+  CMakeLists.txt:94 (project)
+
+
+CMake Deprecation Warning at /home/ongera/Android/Sdk/ndk/27.1.12297006/build/cmake/android-legacy.toolchain.cmake:35 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /home/ongera/Android/Sdk/ndk/27.1.12297006/build/cmake/android.toolchain.cmake:55 (include)
+  /home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-build/CMakeFiles/3.31.6/CMakeSystem.cmake:6 (include)
+  CMakeLists.txt:94 (project)
+
+
+CMake Deprecation Warning at /home/ongera/Android/Sdk/ndk/27.1.12297006/build/cmake/flags.cmake:18 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /usr/share/cmake-3.31/Modules/Platform/Android-Clang.cmake:23 (include)
+  /usr/share/cmake-3.31/Modules/Platform/Android-Clang-C.cmake:1 (include)
+  /usr/share/cmake-3.31/Modules/CMakeCInformation.cmake:48 (include)
+  CMakeLists.txt:94 (project)
+
+
+CMake Warning at CMakeLists.txt:1161 (message):
+  libpsl is enabled, but not found.
+
+

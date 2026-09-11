@@ -1,0 +1,8 @@
+[1/8] Building C object lib/CMakeFiles/libcurl_static.dir/md5.c.o
+[2/8] Building C object lib/CMakeFiles/libcurl_static.dir/curl_sha512_256.c.o
+[3/8] Building C object lib/CMakeFiles/libcurl_static.dir/sha256.c.o
+[4/8] Building C object lib/CMakeFiles/libcurl_static.dir/md4.c.o
+[5/8] Building C object lib/CMakeFiles/libcurl_static.dir/curl_ntlm_core.c.o
+[6/8] Building C object lib/CMakeFiles/libcurl_static.dir/vtls/vtls.c.o
+[7/8] Building C object lib/CMakeFiles/libcurl_static.dir/vtls/openssl.c.o
+[8/8] Linking C static library lib/libcurl.a

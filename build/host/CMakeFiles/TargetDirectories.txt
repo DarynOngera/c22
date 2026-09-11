@@ -1,0 +1,5 @@
+/home/ongera/projects/c22/build/host/CMakeFiles/telemetry_core.dir
+/home/ongera/projects/c22/build/host/CMakeFiles/telemetry_tests.dir
+/home/ongera/projects/c22/build/host/CMakeFiles/test.dir
+/home/ongera/projects/c22/build/host/CMakeFiles/edit_cache.dir
+/home/ongera/projects/c22/build/host/CMakeFiles/rebuild_cache.dir

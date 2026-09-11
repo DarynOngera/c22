@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/verify-openssl_export.cmake;COMMAND;/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/extract-openssl_export.cmake
+source_dir=/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export
+work_dir=/home/ongera/projects/c22/build/android/third_party/openssl/src
+url(s)=/home/ongera/projects/c22/third_party/downloads/openssl.tar.gz
+hash=
+      no_extract=
+

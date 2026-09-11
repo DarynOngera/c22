@@ -1,0 +1,28 @@
+Start testing: Sep 11 16:37 EAT
+----------------------------------------------------------
+1/1 Testing: telemetry_core
+1/1 Test: telemetry_core
+Command: "/home/ongera/projects/c22/build/host/telemetry_tests"
+Directory: /home/ongera/projects/c22/build/host
+"telemetry_core" start time: Sep 11 16:37 EAT
+Output:
+----------------------------------------------------------
+[telemetry] engine started: endpoint=http://host.test/telemetry device=
+[telemetry] post failed (mock failure); retrying in 20 ms
+[telemetry] posted 2 msgs (http 200)
+[telemetry] engine stopped: sent=2 dropped=0
+[telemetry] engine started: endpoint=http://host.test/telemetry device=test-dev
+[telemetry] posted 1 msgs (http 200)
+[telemetry] engine stopped: sent=1 dropped=0
+===============================================================================
+All tests passed (49 assertions in 13 test cases)
+
+<end of output>
+Test time =   0.29 sec
+----------------------------------------------------------
+Test Passed.
+"telemetry_core" end time: Sep 11 16:37 EAT
+"telemetry_core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 11 16:37 EAT

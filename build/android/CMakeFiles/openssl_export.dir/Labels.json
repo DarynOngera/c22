@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/ongera/projects/c22/build/android/CMakeFiles/openssl_export"
+		},
+		{
+			"file" : "/home/ongera/projects/c22/build/android/CMakeFiles/openssl_export.rule"
+		},
+		{
+			"file" : "/home/ongera/projects/c22/build/android/CMakeFiles/openssl_export-complete.rule"
+		},
+		{
+			"file" : "/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-build.rule"
+		},
+		{
+			"file" : "/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-configure.rule"
+		},
+		{
+			"file" : "/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-download.rule"
+		},
+		{
+			"file" : "/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-install.rule"
+		},
+		{
+			"file" : "/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-mkdir.rule"
+		},
+		{
+			"file" : "/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-patch.rule"
+		},
+		{
+			"file" : "/home/ongera/projects/c22/build/android/third_party/openssl/src/openssl_export-stamp/openssl_export-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"openssl_export"
+		],
+		"name" : "openssl_export"
+	}
+}

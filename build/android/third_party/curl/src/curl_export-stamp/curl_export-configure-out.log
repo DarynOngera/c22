@@ -1,0 +1,14 @@
+-- Using CMake version 3.31.6
+-- curl version=[8.11.1]
+-- CMake platform flags: UNIX CROSS
+-- Cross-compiling: Linux/x86_64 -> Android/aarch64
+-- Picky compiler options: -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wsign-conversion -Wno-error=sign-conversion -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wpragmas -Wunused-const-variable -Wheader-guard -Wsometimes-uninitialized -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough
+-- Could NOT find NGHTTP2 (missing: NGHTTP2_INCLUDE_DIR NGHTTP2_LIBRARY) (found version "1.64.0")
+-- Could NOT find Libidn2 (missing: LIBIDN2_INCLUDE_DIR LIBIDN2_LIBRARY) 
+-- Could NOT find Libpsl (missing: LIBPSL_INCLUDE_DIR LIBPSL_LIBRARY) (found version "0.21.2")
+-- Protocols: http https ws wss
+-- Features: alt-svc AsynchDNS HSTS HTTPS-proxy IPv6 Largefile NTLM SSL threadsafe UnixSockets
+-- Enabled SSL backends: OpenSSL v3+
+-- Configuring done (0.2s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/ongera/projects/c22/build/android/third_party/curl/src/curl_export-build

@@ -1,0 +1,6 @@
+/home/ongera/projects/c22/build/android/CMakeFiles/telemetry_core.dir
+/home/ongera/projects/c22/build/android/CMakeFiles/openssl_export.dir
+/home/ongera/projects/c22/build/android/CMakeFiles/curl_export.dir
+/home/ongera/projects/c22/build/android/CMakeFiles/telemetry.dir
+/home/ongera/projects/c22/build/android/CMakeFiles/edit_cache.dir
+/home/ongera/projects/c22/build/android/CMakeFiles/rebuild_cache.dir
