@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cstdlib>
+#include <mutex>
 #include <string>
 #include <vector>
 
@@ -13,33 +14,40 @@
 namespace telemetry::jni {
 namespace {
 
-jobject g_ctx_global = nullptr;
-std::string g_device_id = "unknown";
+struct AndroidContext {
+  std::mutex m;
+  jobject ctx = nullptr;
+};
+AndroidContext g_ctx;
 
 jobject get_system_service(JNIEnv* env, const char* name) {
-  if (!g_ctx_global) return nullptr;
-  jclass ctx_cls = env->GetObjectClass(g_ctx_global);
+  jobject ctx;
+  {
+    std::lock_guard<std::mutex> lk(g_ctx.m);
+    ctx = g_ctx.ctx;
+  }
+  if (!ctx) return nullptr;
+  jclass ctx_cls = env->GetObjectClass(ctx);
   if (!ctx_cls) return nullptr;
   jmethodID mid = env->GetMethodID(
       ctx_cls, "getSystemService", "(Ljava/lang/String;)Ljava/lang/Object;");
   env->DeleteLocalRef(ctx_cls);
   if (!mid) return nullptr;
   jstring name_j = env->NewStringUTF(name);
-  jobject svc = env->CallObjectMethod(g_ctx_global, mid, name_j);
+  jobject svc = env->CallObjectMethod(ctx, mid, name_j);
   env->DeleteLocalRef(name_j);
   return svc;
 }
 
 }  // namespace
 
-void set_android_context(JNIEnv* env, jobject android_context,
-                         const std::string& device_id) {
-  if (g_ctx_global) env->DeleteGlobalRef(g_ctx_global);
-  g_ctx_global = env->NewGlobalRef(android_context);
-  if (!device_id.empty()) g_device_id = device_id;
+void set_android_context(JNIEnv* env, jobject android_context) {
+  {
+    std::lock_guard<std::mutex> lk(g_ctx.m);
+    if (g_ctx.ctx) env->DeleteGlobalRef(g_ctx.ctx);
+    g_ctx.ctx = env->NewGlobalRef(android_context);
+  }
 }
-
-std::string device_id() { return g_device_id; }
 
 nlohmann::json jni_network_active() {
   nlohmann::json j;
@@ -176,7 +184,7 @@ nlohmann::json jni_recent_apps() {
 
   jlong end = telemetry::now_ms();
   jlong start = end - 5LL * 60 * 1000;
-  jobject list = env->CallObjectMethod(um, query, 4 /* INTERVAL_DAILY */, start, end);
+  jobject list = env->CallObjectMethod(um, query, 4 /* INTERVAL_BEST */, start, end);
   env->DeleteLocalRef(cls);
   env->DeleteLocalRef(um);
   if (!list || env->ExceptionCheck()) {
@@ -213,7 +221,7 @@ nlohmann::json jni_recent_apps() {
       if (!env->ExceptionCheck() && ps) {
         std::string p = to_utf(env.get(), ps);
         env->DeleteLocalRef(ps);
-        if (p.compare(0, 17, "android:") != 0 && !p.empty()) {
+        if (!p.empty() && p.rfind("android:", 0) != 0) {
           apps.push_back({p, last_ms, total_ms});
         }
       } else {

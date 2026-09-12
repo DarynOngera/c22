@@ -51,3 +51,17 @@
 7	4677	1789136341839518498	CMakeFiles/telemetry_core.dir/src/core/engine.cpp.o	ea02d90fc9940714
 4677	4706	1789136346509483699	libtelemetry_core.a	a51aa7606c0eb698
 4706	4836	1789136346538483484	libtelemetry.so	ebe03054ad3b42e3
+40	951	1789187368653141312	CMakeFiles/telemetry.dir/src/jni/jni_util.cpp.o	e6f78a45c35b82bd
+40	974	1789187368653749647	CMakeFiles/telemetry.dir/src/transport/curl_client.cpp.o	4b5e6451b52f1393
+39	3081	1789187368650990174	CMakeFiles/telemetry_core.dir/src/core/buffer.cpp.o	a313bcc17d8c0194
+40	3343	1789187368653550252	CMakeFiles/telemetry.dir/src/jni/native_bridge.cpp.o	aa609b1452ab27f5
+40	4139	1789187368653368427	CMakeFiles/telemetry.dir/src/jni/android_context.cpp.o	e127f2abb9ee534c
+39	4663	1789187368652904891	CMakeFiles/telemetry_core.dir/src/core/engine.cpp.o	ea02d90fc9940714
+39	5215	1789187368652682222	CMakeFiles/telemetry_core.dir/src/core/procfs.cpp.o	623af8941e7a49c6
+5215	5243	1789187373826970175	libtelemetry_core.a	a51aa7606c0eb698
+5243	5383	1789187373854970067	libtelemetry.so	ebe03054ad3b42e3
+7	2779	1789188612316152058	CMakeFiles/telemetry_core.dir/src/core/buffer.cpp.o	a313bcc17d8c0194
+7	3077	1789188612317805964	CMakeFiles/telemetry.dir/src/jni/native_bridge.cpp.o	aa609b1452ab27f5
+7	4637	1789188612317506203	CMakeFiles/telemetry_core.dir/src/core/engine.cpp.o	ea02d90fc9940714
+4637	4657	1789188616946138483	libtelemetry_core.a	a51aa7606c0eb698
+4658	4788	1789188616967138422	libtelemetry.so	ebe03054ad3b42e3

@@ -28,6 +28,8 @@ cmake --preset host
 cmake --build build/host
 ctest --test-dir build/host --output-on-failure
 # Binary: build/host/telemetry_tests
+# Note: if `ctest` is a broken shim on this machine (python ModuleNotFoundError),
+# run the binary directly instead: ./build/host/telemetry_tests
 ```
 
 ### Android native library (arm64-v8a)

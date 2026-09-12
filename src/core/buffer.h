@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <deque>
+#include <functional>
 #include <mutex>
 #include <vector>
 
@@ -25,9 +26,12 @@ class Buffer {
   // Removes and returns up to `max` oldest non-expired entries.
   std::vector<Message> drain(size_t max, int64_t now_ms);
 
-  // Block up to `timeout` until woken (data pushed or wake()). Returns true if
-  // woken by an event rather than expiring. Callers must re-check empty().
-  bool wait_not_empty(std::chrono::milliseconds timeout);
+  // Block until data is present or `stop_pred` turns true, bounded by `timeout`.
+  // Returns true if data is available. The predicate keeps the wait both
+  // resistant to lost wakeups (a push that arrives before the wait is observed
+  // atomically) and interruptible by the caller (stop_pred flips -> returns).
+  bool wait_not_empty(std::chrono::milliseconds timeout,
+                      const std::function<bool()>& stop_pred = {});
 
   void wake();  // unblock waiters
 

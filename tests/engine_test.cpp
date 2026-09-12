@@ -131,3 +131,30 @@ TEST_CASE("engine: flush_all delivers synchronously", "[engine]") {
   REQUIRE(body[0]["device_id"] == "test-dev");
   REQUIRE(body[0]["type"] == "location");
 }
+
+TEST_CASE("engine: stop() with failing transport does not deadlock", "[engine]") {
+  auto mc = std::make_unique<MockClient>();
+  MockClient* raw = mc.get();
+  raw->ok_.store(false);
+
+  Config cfg;
+  cfg.endpoint = "http://host.test/telemetry";
+  cfg.flush_interval_ms = 60'000;    // keep the sink idle
+  cfg.retry_backoff_ms = 100'000;     // long backoff; stop() must interrupt it
+  cfg.retry_backoff_max_ms = 100'000;
+  cfg.batch_max = 1000;
+
+  auto& engine = Engine::instance();
+  engine.start_with(cfg, std::move(mc));
+  engine.emit("event", {{"name", "t1"}});
+
+  REQUIRE(wait_until([&] { return raw->calls() >= 1; }, 2000));
+
+  auto start = std::chrono::steady_clock::now();
+  engine.stop();  // final flush post fails -> requeue -> must NOT deadlock
+  auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(
+                        std::chrono::steady_clock::now() - start)
+                        .count();
+  INFO("stop() took " << elapsed_ms << "ms");
+  REQUIRE(elapsed_ms < 5000);
+}

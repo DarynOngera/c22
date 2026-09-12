@@ -44,7 +44,11 @@ class Engine {
   uint64_t messages_sent() const { return sent_.load(); }
   uint64_t messages_dropped() const { return dropped_.load(); }
 
-  const Config& config() const { return cfg_; }
+  // Snapshot of the current configuration.
+  Config config() const {
+    std::lock_guard<std::mutex> lk(config_mutex_);
+    return cfg_;
+  }
 
  private:
   Engine() = default;
@@ -52,12 +56,21 @@ class Engine {
 
   void run_sink();
   void start_samplers();
-  void post_or_requeue(std::vector<Message> batch);
+  // Requires start_mutex_ to be held by the caller.
+  void flush_all_locked();
+  Config snapshot_config() const {
+    std::lock_guard<std::mutex> lk(config_mutex_);
+    return cfg_;
+  }
   nlohmann::json health_payload();
   nlohmann::json network_payload();
   nlohmann::json apps_payload();
 
+  // Lock order: start_mutex_ (outer) -> config_mutex_ (inner). Worker threads
+  // only ever take config_mutex_, so stop() can join them while holding
+  // start_mutex_ without risking a lock cycle.
   mutable std::mutex start_mutex_;
+  mutable std::mutex config_mutex_;
   Config cfg_;
   std::unique_ptr<Buffer> buffer_;
   std::unique_ptr<transport::HttpClient> client_;

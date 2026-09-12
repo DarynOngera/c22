@@ -4,10 +4,7 @@
 #include "jni/android_context.h"
 #include "jni/jni_util.h"
 
-static JavaVM* g_vm = nullptr;
-
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved) {
-  g_vm = vm;
   telemetry::jni::init_jvm(vm);
   (void)reserved;
   return JNI_VERSION_1_6;
@@ -19,7 +16,7 @@ JNIEXPORT void JNICALL Java_com_telemetry_Telemetry_attach(
     JNIEnv* env, jclass, jobject context, jstring device_id, jstring endpoint) {
   std::string did = telemetry::jni::to_utf(env, device_id);
   std::string ep = telemetry::jni::to_utf(env, endpoint);
-  telemetry::jni::set_android_context(env, context, did);
+  telemetry::jni::set_android_context(env, context);
   telemetry::Engine::instance().set_device_id(did);
   if (!ep.empty()) telemetry::Engine::instance().set_endpoint(ep);
 }

@@ -96,7 +96,7 @@ TelemetryService (Java, START_STICKY, partial wake lock)
 ```bash
 cmake --preset host
 cmake --build build/host
-ctest --test-dir build/host --output-on-failure
+ctest --test-dir build/host --output-on-failure   # falls back to: ./build/host/telemetry_tests
 ```
 
 ---
@@ -119,16 +119,23 @@ when the activity is backgrounded (foreground only).
 
 ## Configuration
 
-Edit `src/core/engine.h` defaults or override at runtime:
+Edit `include/telemetry/config.h` defaults or override at runtime:
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
 | `endpoint` | `http://10.0.2.2:8080/telemetry` | POST target (override via `am start-foreground-service -e endpoint URL`) |
 | `device_id` | `Settings.Secure.ANDROID_ID` | Unique per app signing key + user |
-| `buffer_max` | 4096 | Max messages before drop-oldest kicks in |
-| `batch_max` | 200 | Messages per HTTP POST |
-| `flush_interval_ms` | 15 000 | Idle cadence for the sink thread |
 | `tls_verify` | true | Verify server certificate (curl `CURLOPT_SSL_VERIFYPEER`) |
+| `health_interval_ms` | 10 000 | Health sampler cadence |
+| `network_interval_ms` | 10 000 | Network sampler cadence (0 disables) |
+| `apps_interval_ms` | 30 000 | Apps sampler cadence (0 disables) |
+| `flush_interval_ms` | 15 000 | Idle cadence for the sink thread |
+| `http_timeout_ms` | 10 000 | Per-POST HTTP timeout |
+| `buffer_max` | 4096 | Max messages before drop-oldest kicks in |
+| `buffer_ttl_ms` | 24 h | Drop messages older than this (0 disables) |
+| `batch_max` | 200 | Messages per HTTP POST |
+| `retry_backoff_ms` | 2 000 | Initial sink retry backoff after a failed POST |
+| `retry_backoff_max_ms` | 30 000 | Ceiling for the exponential backoff |
 
 ---
 

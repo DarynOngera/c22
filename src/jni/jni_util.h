@@ -28,7 +28,6 @@ class Env {
 };
 
 std::string to_utf(JNIEnv* env, jstring s);
-jstring to_jstring(JNIEnv* env, const std::string& s);
 
 // Logs and clears a pending Java exception. Returns true if one occurred.
 bool clear_exception(JNIEnv* env, const char* where);

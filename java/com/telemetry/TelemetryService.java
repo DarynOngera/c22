@@ -13,6 +13,8 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.PowerManager;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * 24/7 foreground service that hosts the native telemetry engine.
  * Started with:
@@ -49,7 +51,8 @@ public class TelemetryService extends Service {
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "telemetry:wakelock");
-        wakeLock.acquire();
+        // Upper bound so a crash cannot hold the lock forever.
+        wakeLock.acquire(TimeUnit.HOURS.toMillis(1));
     }
 
     @Override
@@ -112,8 +115,7 @@ public class TelemetryService extends Service {
     }
 
     private Notification buildNotification() {
-        return new Notification.Builder(this)
-                .setChannelId(CHANNEL_ID)
+        return new Notification.Builder(this, CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.stat_notify_sync)
                 .setContentTitle("Telemetry")
                 .setContentText("Collecting device telemetry")

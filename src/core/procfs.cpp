@@ -79,40 +79,53 @@ nlohmann::json mem_info() {
 nlohmann::json battery_info() {
   nlohmann::json j;
   j["present"] = false;
-  const char* base = "/sys/class/power_supply/battery";
-  auto value = [](const char* path) -> long long {
-    FILE* f = std::fopen(path, "r");
+  const std::string base = "/sys/class/power_supply/battery";
+  auto value = [&base](const char* tail) -> long long {
+    FILE* f = std::fopen((base + tail).c_str(), "r");
     if (!f) return -1;
     long long v = -1;
     if (std::fscanf(f, "%lld", &v) != 1) v = -1;
     std::fclose(f);
     return v;
   };
-  long long cap = value("/sys/class/power_supply/battery/capacity");
-  long long volt = value("/sys/class/power_supply/battery/voltage_now");
-  long long curr = value("/sys/class/power_supply/battery/current_now");
-  long long temp_mc = value("/sys/class/power_supply/battery/temp");
+  long long cap = value("/capacity");
+  long long volt = value("/voltage_now");
+  long long curr = value("/current_now");
+  long long temp_mc = value("/temp");
   if (cap < 0 && volt < 0 && curr < 0 && temp_mc < 0) return j;
   j["present"] = true;
   if (cap >= 0) j["capacity_pct"] = cap;
   if (volt >= 0) j["voltage_v"] = volt / 1e6;
   if (curr >= 0) j["current_a"] = curr / 1e6;
   if (temp_mc >= 0) j["temperature_c"] = temp_mc / 10.0;
-  std::string status = trim(read_file("/sys/class/power_supply/battery/status"));
+  std::string status = trim(read_file((base + "/status").c_str()));
   if (!status.empty()) j["status"] = status;
-  (void)base;
   return j;
 }
 
 nlohmann::json thermal_info() {
   nlohmann::json j;
   double max_c = 0;
-  DIR* dir = opendir("/sys/devices/virtual/thermal");
+  // /sys/class/thermal is the portable path; fall back to the device-model
+  // alias only if the standard path is absent.
+  const char* bases[] = {"/sys/class/thermal", "/sys/devices/virtual/thermal"};
+  const char* base = nullptr;
+  DIR* dir = nullptr;
+  for (const char* candidate : bases) {
+    dir = opendir(candidate);
+    if (dir) {
+      base = candidate;
+      break;
+    }
+  }
   if (!dir) return j;
   dirent* e;
   while ((e = readdir(dir)) != nullptr) {
     if (std::strncmp(e->d_name, "thermal_zone", 12) != 0) continue;
-    std::string path = std::string("/sys/devices/virtual/thermal/") + e->d_name + "/temp";
+    std::string path(base);
+    path += '/';
+    path += e->d_name;
+    path += "/temp";
     long long v = -1;
     FILE* f = std::fopen(path.c_str(), "r");
     if (f) {
@@ -202,7 +215,12 @@ nlohmann::json process_summary() {
     std::string name;
     std::ifstream cmd(base + "/comm");
     std::getline(cmd, name);
-    rss.push_back({{"pid", std::stoi(e->d_name)},
+    // PID dirs are numeric; reject anything that is not a fully-consumed
+    // integer rather than risking std::stoi throwing in the sampler thread.
+    char* end = nullptr;
+    long pid = std::strtol(e->d_name, &end, 10);
+    if (end == e->d_name || *end != '\0') continue;
+    rss.push_back({{"pid", pid},
                    {"name", trim(name)},
                    {"rss_kb", rss_pages * 4}});
   }

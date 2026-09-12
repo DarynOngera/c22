@@ -9,10 +9,7 @@
 namespace telemetry::jni {
 
 // Called from JNI attach before telemetry starts.
-void set_android_context(JNIEnv* env, jobject android_context,
-                         const std::string& device_id);
-
-std::string device_id();
+void set_android_context(JNIEnv* env, jobject android_context);
 
 // Connectivity/Telephony/Wifi summary: active network, signal strength, wifi rssi.
 nlohmann::json jni_network_active();

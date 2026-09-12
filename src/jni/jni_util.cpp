@@ -50,6 +50,9 @@ Env::Env() {
 
 Env::~Env() {
   if (attached_ && g_jvm) {
+    // Clear the TLS flag so the thread-exit destructor does not detach a
+    // thread we already detached here (double DetachCurrentThread is UB).
+    pthread_setspecific(g_env_key, nullptr);
     g_jvm->DetachCurrentThread();
     attached_ = false;
   }
@@ -62,10 +65,6 @@ std::string to_utf(JNIEnv* env, jstring s) {
   std::string out(utf);
   env->ReleaseStringUTFChars(s, utf);
   return out;
-}
-
-jstring to_jstring(JNIEnv* env, const std::string& s) {
-  return env->NewStringUTF(s.c_str());
 }
 
 bool clear_exception(JNIEnv* env, const char* where) {

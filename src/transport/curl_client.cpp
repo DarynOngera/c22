@@ -5,6 +5,20 @@
 namespace telemetry::transport {
 namespace {
 
+// libcurl requires curl_global_init() exactly once before any use and
+// curl_global_cleanup() exactly once when the process exits. A function-local
+// static gives us both without ordering hazards.
+class CurlGlobal {
+ public:
+  CurlGlobal() { curl_global_init(CURL_GLOBAL_DEFAULT); }
+  ~CurlGlobal() { curl_global_cleanup(); }
+};
+
+void ensure_curl_global() {
+  static CurlGlobal global;
+  (void)global;
+}
+
 size_t write_body(char* ptr, size_t size, size_t nmemb, void* userdata) {
   auto* out = static_cast<std::string*>(userdata);
   out->append(ptr, size * nmemb);
@@ -13,7 +27,7 @@ size_t write_body(char* ptr, size_t size, size_t nmemb, void* userdata) {
 
 class CurlClient final : public HttpClient {
  public:
-  CurlClient() { curl_global_init(CURL_GLOBAL_DEFAULT); }
+  CurlClient() { ensure_curl_global(); }
   ~CurlClient() override = default;
 
   Result post(const std::string& url, const std::string& body, int timeout_ms) override {

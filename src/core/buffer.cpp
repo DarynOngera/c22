@@ -20,6 +20,7 @@ void Buffer::push_front(std::vector<Message> ms) {
     if (max_ > 0 && q_.size() >= max_) q_.pop_back();  // drop newest at capacity
     q_.push_front(std::move(*it));
   }
+  cv_.notify_all();
 }
 
 bool Buffer::empty() const {
@@ -44,9 +45,19 @@ std::vector<Message> Buffer::drain(size_t max, int64_t now_ms) {
   return out;
 }
 
-bool Buffer::wait_not_empty(std::chrono::milliseconds timeout) {
+bool Buffer::wait_not_empty(std::chrono::milliseconds timeout,
+                            const std::function<bool()>& stop_pred) {
   std::unique_lock<std::mutex> lk(m_);
-  return cv_.wait_for(lk, timeout) == std::cv_status::no_timeout;
+  auto ready = [&] {
+    if (stop_pred && stop_pred()) return true;
+    return !q_.empty();
+  };
+  // Predicate waits check the condition atomically with sleeping, so a push
+  // that arrives just before the wait is still observed (no lost wakeup).
+  // stop_pred makes the wait interruptible on shutdown.
+  if (ready()) return !q_.empty();
+  cv_.wait_for(lk, timeout, ready);
+  return !q_.empty();
 }
 
 void Buffer::wake() { cv_.notify_all(); }
