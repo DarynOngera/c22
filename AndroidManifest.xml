@@ -20,7 +20,8 @@
     <application
         android:label="Telemetry"
         android:allowBackup="false"
-        android:debuggable="true">
+        android:debuggable="true"
+        android:usesCleartextTraffic="true">
 
         <service
             android:name=".TelemetryService"

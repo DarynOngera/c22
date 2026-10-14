@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/ongera/projects/c22/build/host/
+cmake_ninja_workdir = /home/runner/work/c22/c22/build/host/
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target telemetry_core
 
@@ -49,40 +49,50 @@ cmake_ninja_workdir = /home/ongera/projects/c22/build/host/
 
 build cmake_object_order_depends_target_telemetry_core: phony || .
 
-build CMakeFiles/telemetry_core.dir/src/core/buffer.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/ongera/projects/c22/src/core/buffer.cpp || cmake_object_order_depends_target_telemetry_core
+build CMakeFiles/telemetry_core.dir/src/core/buffer.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/runner/work/c22/c22/src/core/buffer.cpp || cmake_object_order_depends_target_telemetry_core
   DEP_FILE = CMakeFiles/telemetry_core.dir/src/core/buffer.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_core.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_core.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_core.dir/telemetry_core.pdb
+  TARGET_PDB = libtelemetry_core.pdb
 
-build CMakeFiles/telemetry_core.dir/src/core/scheduler.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/ongera/projects/c22/src/core/scheduler.cpp || cmake_object_order_depends_target_telemetry_core
+build CMakeFiles/telemetry_core.dir/src/core/scheduler.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/runner/work/c22/c22/src/core/scheduler.cpp || cmake_object_order_depends_target_telemetry_core
   DEP_FILE = CMakeFiles/telemetry_core.dir/src/core/scheduler.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_core.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_core.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_core.dir/telemetry_core.pdb
+  TARGET_PDB = libtelemetry_core.pdb
 
-build CMakeFiles/telemetry_core.dir/src/core/procfs.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/ongera/projects/c22/src/core/procfs.cpp || cmake_object_order_depends_target_telemetry_core
+build CMakeFiles/telemetry_core.dir/src/core/procfs.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/runner/work/c22/c22/src/core/procfs.cpp || cmake_object_order_depends_target_telemetry_core
   DEP_FILE = CMakeFiles/telemetry_core.dir/src/core/procfs.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_core.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_core.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_core.dir/telemetry_core.pdb
+  TARGET_PDB = libtelemetry_core.pdb
 
-build CMakeFiles/telemetry_core.dir/src/core/engine.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/ongera/projects/c22/src/core/engine.cpp || cmake_object_order_depends_target_telemetry_core
+build CMakeFiles/telemetry_core.dir/src/core/engine.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/runner/work/c22/c22/src/core/engine.cpp || cmake_object_order_depends_target_telemetry_core
   DEP_FILE = CMakeFiles/telemetry_core.dir/src/core/engine.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_core.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_core.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_core.dir/telemetry_core.pdb
+  TARGET_PDB = libtelemetry_core.pdb
 
-build CMakeFiles/telemetry_core.dir/src/transport/null_client.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/ongera/projects/c22/src/transport/null_client.cpp || cmake_object_order_depends_target_telemetry_core
+build CMakeFiles/telemetry_core.dir/src/transport/null_client.cpp.o: CXX_COMPILER__telemetry_core_unscanned_Debug /home/runner/work/c22/c22/src/transport/null_client.cpp || cmake_object_order_depends_target_telemetry_core
   DEP_FILE = CMakeFiles/telemetry_core.dir/src/transport/null_client.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_core.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_core.dir/src/transport
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_core.dir/telemetry_core.pdb
+  TARGET_PDB = libtelemetry_core.pdb
 
 
 # =============================================================================
@@ -97,8 +107,9 @@ build libtelemetry_core.a: CXX_STATIC_LIBRARY_LINKER__telemetry_core_Debug CMake
   OBJECT_DIR = CMakeFiles/telemetry_core.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_core.dir/telemetry_core.pdb
   TARGET_FILE = libtelemetry_core.a
-  TARGET_PDB = telemetry_core.a.dbg
+  TARGET_PDB = libtelemetry_core.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target telemetry_tests
@@ -109,40 +120,50 @@ build libtelemetry_core.a: CXX_STATIC_LIBRARY_LINKER__telemetry_core_Debug CMake
 
 build cmake_object_order_depends_target_telemetry_tests: phony || cmake_object_order_depends_target_telemetry_core
 
-build CMakeFiles/telemetry_tests.dir/tests/test_main.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/ongera/projects/c22/tests/test_main.cpp || cmake_object_order_depends_target_telemetry_tests
+build CMakeFiles/telemetry_tests.dir/tests/test_main.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/runner/work/c22/c22/tests/test_main.cpp || cmake_object_order_depends_target_telemetry_tests
   DEP_FILE = CMakeFiles/telemetry_tests.dir/tests/test_main.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_tests.dir/tests
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_tests.dir/
+  TARGET_PDB = telemetry_tests.pdb
 
-build CMakeFiles/telemetry_tests.dir/tests/buffer_test.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/ongera/projects/c22/tests/buffer_test.cpp || cmake_object_order_depends_target_telemetry_tests
+build CMakeFiles/telemetry_tests.dir/tests/buffer_test.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/runner/work/c22/c22/tests/buffer_test.cpp || cmake_object_order_depends_target_telemetry_tests
   DEP_FILE = CMakeFiles/telemetry_tests.dir/tests/buffer_test.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_tests.dir/tests
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_tests.dir/
+  TARGET_PDB = telemetry_tests.pdb
 
-build CMakeFiles/telemetry_tests.dir/tests/json_test.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/ongera/projects/c22/tests/json_test.cpp || cmake_object_order_depends_target_telemetry_tests
+build CMakeFiles/telemetry_tests.dir/tests/json_test.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/runner/work/c22/c22/tests/json_test.cpp || cmake_object_order_depends_target_telemetry_tests
   DEP_FILE = CMakeFiles/telemetry_tests.dir/tests/json_test.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_tests.dir/tests
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_tests.dir/
+  TARGET_PDB = telemetry_tests.pdb
 
-build CMakeFiles/telemetry_tests.dir/tests/procfs_test.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/ongera/projects/c22/tests/procfs_test.cpp || cmake_object_order_depends_target_telemetry_tests
+build CMakeFiles/telemetry_tests.dir/tests/procfs_test.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/runner/work/c22/c22/tests/procfs_test.cpp || cmake_object_order_depends_target_telemetry_tests
   DEP_FILE = CMakeFiles/telemetry_tests.dir/tests/procfs_test.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_tests.dir/tests
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_tests.dir/
+  TARGET_PDB = telemetry_tests.pdb
 
-build CMakeFiles/telemetry_tests.dir/tests/engine_test.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/ongera/projects/c22/tests/engine_test.cpp || cmake_object_order_depends_target_telemetry_tests
+build CMakeFiles/telemetry_tests.dir/tests/engine_test.cpp.o: CXX_COMPILER__telemetry_tests_unscanned_Debug /home/runner/work/c22/c22/tests/engine_test.cpp || cmake_object_order_depends_target_telemetry_tests
   DEP_FILE = CMakeFiles/telemetry_tests.dir/tests/engine_test.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/ongera/projects/c22/include -I/home/ongera/projects/c22/src -I/home/ongera/projects/c22/third_party/include
+  INCLUDES = -I/home/runner/work/c22/c22/include -I/home/runner/work/c22/c22/src -I/home/runner/work/c22/c22/third_party/include
   OBJECT_DIR = CMakeFiles/telemetry_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/telemetry_tests.dir/tests
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_tests.dir/
+  TARGET_PDB = telemetry_tests.pdb
 
 
 # =============================================================================
@@ -160,15 +181,16 @@ build telemetry_tests: CXX_EXECUTABLE_LINKER__telemetry_tests_Debug CMakeFiles/t
   OBJECT_DIR = CMakeFiles/telemetry_tests.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/telemetry_tests.dir/
   TARGET_FILE = telemetry_tests
-  TARGET_PDB = telemetry_tests.dbg
+  TARGET_PDB = telemetry_tests.pdb
 
 
 #############################################
 # Utility command for test
 
 build CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ongera/projects/c22/build/host && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /home/runner/work/c22/c22/build/host && /usr/local/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -180,8 +202,9 @@ build test: phony CMakeFiles/test.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ongera/projects/c22/build/host && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/runner/work/c22/c22/build/host && /usr/local/bin/ccmake -S/home/runner/work/c22/c22 -B/home/runner/work/c22/c22/build/host
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -191,7 +214,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ongera/projects/c22/build/host && /usr/bin/cmake --regenerate-during-build -S/home/ongera/projects/c22 -B/home/ongera/projects/c22/build/host
+  COMMAND = cd /home/runner/work/c22/c22/build/host && /usr/local/bin/cmake --regenerate-during-build -S/home/runner/work/c22/c22 -B/home/runner/work/c22/c22/build/host
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -209,7 +232,7 @@ build telemetry_core: phony libtelemetry_core.a
 # =============================================================================
 
 #############################################
-# Folder: /home/ongera/projects/c22/build/host
+# Folder: /home/runner/work/c22/c22/build/host
 
 build all: phony libtelemetry_core.a telemetry_tests
 
@@ -220,14 +243,14 @@ build all: phony libtelemetry_core.a telemetry_tests
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/ongera/projects/c22/CMakeLists.txt /usr/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.31/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.31/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.31/Modules/Compiler/GNU.cmake /usr/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.31/Modules/FindPackageMessage.cmake /usr/share/cmake-3.31/Modules/FindThreads.cmake /usr/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-3.31/Modules/Linker/GNU.cmake /usr/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.31/Modules/Platform/Linux.cmake /usr/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/runner/work/c22/c22/CMakeLists.txt /usr/local/share/cmake-3.31/Modules/CMakeCXXCompiler.cmake.in /usr/local/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp /usr/local/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.31/Modules/CMakeCompilerIdDetection.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake /usr/local/share/cmake-3.31/Modules/CMakeFindBinUtils.cmake /usr/local/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.31/Modules/CMakeNinjaFindMake.cmake /usr/local/share/cmake-3.31/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/share/cmake-3.31/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/share/cmake-3.31/Modules/CMakeParseLibraryArchitecture.cmake /usr/local/share/cmake-3.31/Modules/CMakeSystem.cmake.in /usr/local/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake /usr/local/share/cmake-3.31/Modules/CMakeTestCompilerCommon.cmake /usr/local/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /usr/local/share/cmake-3.31/Modules/CheckIncludeFileCXX.cmake /usr/local/share/cmake-3.31/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.31/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GNU-FindBinUtils.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.31/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/local/share/cmake-3.31/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/TI-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/TIClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.31/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.31/Modules/FindThreads.cmake /usr/local/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/local/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/local/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake /usr/local/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake /usr/local/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /usr/local/share/cmake-3.31/Modules/Linker/GNU.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux-Determine-CXX.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/ongera/projects/c22/CMakeLists.txt /usr/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.31/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.31/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.31/Modules/Compiler/GNU.cmake /usr/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.31/Modules/FindPackageMessage.cmake /usr/share/cmake-3.31/Modules/FindThreads.cmake /usr/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-3.31/Modules/Linker/GNU.cmake /usr/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.31/Modules/Platform/Linux.cmake /usr/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
+build /home/runner/work/c22/c22/CMakeLists.txt /usr/local/share/cmake-3.31/Modules/CMakeCXXCompiler.cmake.in /usr/local/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp /usr/local/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.31/Modules/CMakeCompilerIdDetection.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake /usr/local/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake /usr/local/share/cmake-3.31/Modules/CMakeFindBinUtils.cmake /usr/local/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.31/Modules/CMakeNinjaFindMake.cmake /usr/local/share/cmake-3.31/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/share/cmake-3.31/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/share/cmake-3.31/Modules/CMakeParseLibraryArchitecture.cmake /usr/local/share/cmake-3.31/Modules/CMakeSystem.cmake.in /usr/local/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake /usr/local/share/cmake-3.31/Modules/CMakeTestCompilerCommon.cmake /usr/local/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /usr/local/share/cmake-3.31/Modules/CheckIncludeFileCXX.cmake /usr/local/share/cmake-3.31/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.31/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GNU-FindBinUtils.cmake /usr/local/share/cmake-3.31/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.31/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/local/share/cmake-3.31/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/TI-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/TIClang-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/local/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.31/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.31/Modules/FindThreads.cmake /usr/local/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/local/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/local/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake /usr/local/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake /usr/local/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /usr/local/share/cmake-3.31/Modules/Linker/GNU.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux-Determine-CXX.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.31/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
 
 
 #############################################
