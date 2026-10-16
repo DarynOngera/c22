@@ -1,10 +1,10 @@
-Start testing: Sep 11 16:37 EAT
+Start testing: Oct 14 13:10 UTC
 ----------------------------------------------------------
 1/1 Testing: telemetry_core
 1/1 Test: telemetry_core
-Command: "/home/ongera/projects/c22/build/host/telemetry_tests"
-Directory: /home/ongera/projects/c22/build/host
-"telemetry_core" start time: Sep 11 16:37 EAT
+Command: "/home/runner/work/c22/c22/build/host/telemetry_tests"
+Directory: /home/runner/work/c22/c22/build/host
+"telemetry_core" start time: Oct 14 13:10 UTC
 Output:
 ----------------------------------------------------------
 [telemetry] engine started: endpoint=http://host.test/telemetry device=
@@ -15,14 +15,14 @@ Output:
 [telemetry] posted 1 msgs (http 200)
 [telemetry] engine stopped: sent=1 dropped=0
 ===============================================================================
-All tests passed (49 assertions in 13 test cases)
+All tests passed (47 assertions in 13 test cases)
 
 <end of output>
-Test time =   0.29 sec
+Test time =   0.28 sec
 ----------------------------------------------------------
 Test Passed.
-"telemetry_core" end time: Sep 11 16:37 EAT
+"telemetry_core" end time: Oct 14 13:10 UTC
 "telemetry_core" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 11 16:37 EAT
+End testing: Oct 14 13:10 UTC
